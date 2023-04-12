@@ -5,14 +5,4 @@ explorar<-tabItem(tabName = "explorar",
     uiOutput("popup")
   )
 )
-
-
-
-
-            
-            
-            
-            
-
-                  
-                  
+     

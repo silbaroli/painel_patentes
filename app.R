@@ -120,6 +120,9 @@ server <- function(input, output, session) {
     as.numeric(strsplit(input$select_button, "_")[[1]][2])
   })
   
+  unzip("data/patentes.db.zip",files='patentes.db')
+  #variant=data.table::fread('variant_surveillance.tsv',sep="\t",encoding = "UTF-8")
+  
   con <- dbConnect(RSQLite::SQLite(),"data/patentes.db")
   
   sqltb1 <- DBI::dbReadTable(con,"patente")
